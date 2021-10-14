@@ -12,6 +12,7 @@ import com.onu.worldsurviver.model.entity.DadosRepresentante;
  * Essa interface é responsável por protocolar e executar os métodos CRUD na classe: RepresentanteServiceImple
  * que são estendidas da classe JpaRepository.
  * 
+ * 
  * @author: Mateus Santos de Jesus.
  */
 

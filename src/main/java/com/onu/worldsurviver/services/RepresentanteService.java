@@ -11,6 +11,7 @@ import com.onu.worldsurviver.model.entity.DadosRepresentante;
  * O Objetivo dessa classe é manter o fluxo de métodos que a classe respectiva deverá implementar
  * a fim de prezar pela segurança dos dados.
  * 
+ * 
  * @author: Mateus Santos de Jesus
  */
 

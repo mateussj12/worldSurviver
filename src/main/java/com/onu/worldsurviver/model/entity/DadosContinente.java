@@ -20,6 +20,7 @@ import lombok.Data;
  * Além disso, nessa etapa também serão codificados os métodos Getters e Setters,
  * equals e hashcode, constructor e toStrign através da anotação @Data do lombok.
  * 
+ * 
  * @author: Mateus Santos de Jesus
  */
 

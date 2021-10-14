@@ -7,6 +7,7 @@ package com.onu.worldsurviver.model.enums;
  * de dados sendo uma lista pré-definida de Check que posteriormente, juntamente
  * da entidade: DadosRepresentante, será atribuido o valor ao banco de dados.
  *
+ * 
  * @author Mateus Santos de Jesus
  */
 
