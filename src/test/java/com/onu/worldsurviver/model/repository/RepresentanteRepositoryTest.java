@@ -1,5 +1,7 @@
 package com.onu.worldsurviver.model.repository;
 
+import java.util.Optional;
+
 import com.onu.worldsurviver.model.entity.DadosRepresentante;
 
 import org.assertj.core.api.Assertions;
@@ -49,4 +51,53 @@ public class RepresentanteRepositoryTest {
       Assertions.assertThat(result).isFalse();
    }
 
+   @Test
+   public void devePersistirUmRepresentante() {
+      
+      //Cenário
+      DadosRepresentante representante = DadosRepresentante
+      .builder()
+      .nome("Mateus Santos de Jesus")
+      .email("mateussj@gmail.com")
+      .senha("12345678")
+      .build();
+      
+      //Execução
+      DadosRepresentante representanteSalvo = repository.save(representante);
+
+      //Verificação
+      Assertions.assertThat(representanteSalvo.getId()).isNotNull();
+   }
+
+   @Test
+   public void deveBuscarPorEmail() {
+
+      //Cenário
+      DadosRepresentante representante = DadosRepresentante
+      .builder()
+      .nome("Mateus Santos de Jesus")
+      .email("mateussj@gmail.com")
+      .senha("12345678")
+      .build();
+
+      entityManager.persist(representante);
+
+      //Execução
+      Optional<DadosRepresentante> result = repository.findByEmail("mateussj@gmail.com");
+
+      //Verificação
+      Assertions.assertThat(result.isPresent()).isTrue();
+
+   }
+
+   @Test
+   public void deveRetornarVazioSeNaoHouverEmail() {
+
+      //Execução
+      Optional<DadosRepresentante> result = repository.findByEmail("mateussj@gmail.com");
+
+      //Verificação
+      Assertions.assertThat(result.isPresent()).isFalse();
+
+   }
 }

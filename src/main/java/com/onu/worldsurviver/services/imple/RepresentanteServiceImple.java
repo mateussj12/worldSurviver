@@ -70,5 +70,11 @@ public class RepresentanteServiceImple implements RepresentanteService {
             return null;
         }
     }
+
+    @Override
+    public DadosRepresentante buscarRepresentante(Long id) {
+        // TODO Auto-generated method stub
+        return null;
+    }
     
 }

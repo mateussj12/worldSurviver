@@ -17,6 +17,8 @@ import com.onu.worldsurviver.model.entity.DadosRepresentante;
 
 public interface RepresentanteService {
     
+    DadosRepresentante buscarRepresentante(Long id);
+
     DadosRepresentante autenticar(String email, String senha);
     
     DadosRepresentante salvarRepresentante(DadosRepresentante representante);
