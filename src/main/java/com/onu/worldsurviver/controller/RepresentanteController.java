@@ -1,6 +1,7 @@
 package com.onu.worldsurviver.controller;
 
 import com.onu.worldsurviver.dto.RepresentanteDto;
+import com.onu.worldsurviver.exception.ErroAutenticacaoException;
 import com.onu.worldsurviver.exception.RegraNegocioException;
 import com.onu.worldsurviver.model.entity.DadosRepresentante;
 import com.onu.worldsurviver.services.RepresentanteService;
@@ -22,6 +23,21 @@ public class RepresentanteController {
        
         this.service = service;
     
+    }
+
+    @PostMapping("/autenticar")
+    public ResponseEntity autenticar(@RequestBody RepresentanteDto dto)
+    {
+        try {
+
+            DadosRepresentante representanteAutenticado = service.autenticar(dto.getEmail(), dto.getSenha());
+            return new ResponseEntity(representanteAutenticado, HttpStatus.CREATED);
+
+        } catch(ErroAutenticacaoException e) {
+
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+
     }
 
     @PostMapping

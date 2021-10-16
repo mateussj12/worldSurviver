@@ -11,8 +11,10 @@ import javax.persistence.Table;
 
 import com.onu.worldsurviver.model.enums.Sexo;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * ENTIDADE: DadosRepresentante
@@ -29,6 +31,8 @@ import lombok.Data;
 @Entity
 @Table( name = "dadosRepresentante" , schema = "denuncias" )
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
 public class DadosRepresentante {
     
