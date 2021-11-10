@@ -15,9 +15,7 @@ import com.onu.worldsurviver.model.entity.DadosRepresentante;
  * @author: Mateus Santos de Jesus
  */
 
-public interface RepresentanteService {
-    
-    DadosRepresentante buscarRepresentante(Long id);
+public interface RepresentanteService { 
 
     DadosRepresentante autenticar(String email, String senha);
     

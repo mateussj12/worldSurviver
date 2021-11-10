@@ -91,6 +91,36 @@ public class RepresentanteRepositoryTest {
    }
 
    @Test
+   public void deveBuscarPorId() {
+
+      //Cenário
+      DadosRepresentante representante = DadosRepresentante
+      .builder()
+      .nome("Mateus Santos de Jesus")
+      .email("mateussj@gmail.com")
+      .senha("12345678")
+      .build();
+
+      entityManager.persist(representante);
+
+      //Execução
+      Optional<DadosRepresentante> result = repository.findById(1L);
+
+      //Verificação
+      Assertions.assertThat(result.isPresent()).isTrue();
+   }
+
+   @Test
+   public void deveRetornarVazioSeNaoHouverId() {
+
+      //Execução
+      Optional<DadosRepresentante> result = repository.findById(1L);
+
+      //Verificação
+      Assertions.assertThat(result.isPresent()).isFalse();
+   }
+
+   @Test
    public void deveRetornarVazioSeNaoHouverEmail() {
 
       //Execução

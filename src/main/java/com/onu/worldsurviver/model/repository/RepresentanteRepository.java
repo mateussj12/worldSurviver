@@ -22,4 +22,6 @@ public interface RepresentanteRepository extends JpaRepository<DadosRepresentant
 
    Optional<DadosRepresentante> findByEmail(String email); 
 
+   Optional<DadosRepresentante> findById(Long id);
+
 }
