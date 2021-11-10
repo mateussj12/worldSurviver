@@ -2,15 +2,10 @@ package com.onu.worldsurviver.model.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
-import com.onu.worldsurviver.model.enums.Sexo;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -69,7 +64,4 @@ public class DadosRepresentante {
     @Column( name = "cargo" )
     private String cargo;
 
-    @Column( name = "sexo" )
-    @Enumerated(value = EnumType.STRING)
-    private Sexo sexo;    
 }
