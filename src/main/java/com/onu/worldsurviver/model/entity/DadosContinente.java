@@ -42,9 +42,6 @@ public class DadosContinente {
     @Column( name = "denuncia" )
     private String denuncia;
 
-    @Column( name = "data" )
-    private String data;
-
     @Column( name = "pais" )
     private String pais;
 

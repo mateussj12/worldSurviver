@@ -1,5 +1,7 @@
 package com.onu.worldsurviver.services;
 
+import java.util.Optional;
+
 import com.onu.worldsurviver.model.entity.DadosRepresentante;
 
 
@@ -22,4 +24,6 @@ public interface RepresentanteService {
     DadosRepresentante salvarRepresentante(DadosRepresentante representante);
 
     Void validarEmail(String email);
+
+    Optional<DadosRepresentante> obterPorId(Long id);
 }

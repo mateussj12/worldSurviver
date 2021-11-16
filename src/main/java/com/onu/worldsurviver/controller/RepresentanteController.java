@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/representantes")
 public class RepresentanteController {
     
-    private RepresentanteService service;
+    private final RepresentanteService service;
 
     public RepresentanteController (RepresentanteService service) {
        

@@ -70,5 +70,14 @@ public class RepresentanteServiceImple implements RepresentanteService {
             return null;
         }
     }
+
+    @Override
+    public Optional<DadosRepresentante> obterPorId(Long id) {
+        return representanteRepository.findById(id);
+    }
+
+    
+
+    
     
 }
